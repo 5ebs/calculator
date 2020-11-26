@@ -1,0 +1,154 @@
+html {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: whitesmoke;
+  background: linear-gradient(to bottom, #fefefe, #e3e7ea);
+}
+
+.calculator {
+  background: linear-gradient(to bottom, #fefefe, #e3e7ea);
+  width: 300px;
+  border-radius: 5px;
+  box-shadow: 0 5px 30px -5px rgba(0, 0, 0, 0.295);
+  border-radius: 15px;
+  position: relative;
+}
+
+/* Display */
+.calculator-display {
+  background: #f9f9fb;
+  color: #5f6972;
+  margin: 0;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  border-radius: 10px 10px 0 0;
+  max-width: 100%;
+}
+
+.calculator-display h1 {
+  margin: 0;
+  padding: 25px;
+  font-size: 55px;
+  font-family: "Lucida Console", sans-serif;
+  font-weight: 100;
+  overflow-x: auto;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 5px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #bf6ffc;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #9f2df8;
+}
+
+/* Buttons */
+.calculator-buttons {
+  display: grid;
+  grid-gap: 12px;
+  grid-template-columns: repeat(4, 1fr);
+  padding: 10px;
+}
+
+button {
+  min-height: 50px;
+  font-size: 20px;
+  font-weight: 100;
+  border: none;
+  background: #f3f5f7;
+  color: #64879e;
+  border-radius: 90px;
+  cursor: pointer;
+  box-shadow: 2px 2px 7px 1px rgba(187, 187, 187, 0.171);
+  border: solid white 0.5px;
+}
+
+button:hover {
+  filter: brightness(110%);
+}
+
+button:active {
+  transform: translateY(1px);
+}
+
+button:focus {
+  outline: none;
+}
+
+.operator {
+  background: #e1d5e9;
+  color: rgb(94, 39, 137);
+  font-size: 30px;
+  border: solid #e6ddec 1px;
+  box-shadow: 2px 2px 7px 0px rgba(98, 0, 172, 0.37);
+}
+
+.operator:hover {
+  background: #9f2df8;
+  color: white;
+  border: none;
+}
+
+.clear {
+  background: #feb92d;
+  color: #c3963f;
+}
+
+.clear:hover {
+  filter: brightness(110%);
+  color: white;
+}
+
+.equal-sign {
+  grid-column: -2;
+  grid-row: 2 / span 4;
+  background: #9f2df8;
+  color: white;
+  border: solid #e6ddec 1px;
+}
+
+.equal-sign:hover {
+  filter: brightness(96%);
+}
+
+footer {
+  position: absolute;
+  bottom: 5%;
+  color: #64879e;
+  font-size: 15px;
+}
+
+a:link {
+  color: #9f2df8;
+}
+a:visited {
+  color: #a126ff;
+}
+
+/* Media Query: Large Smartphone (Vertical) */
+@media screen and (max-width: 600px) {
+  .calculator {
+    width: 95%;
+  }
+  footer {
+    bottom: 10%;
+    font-size: 18px;
+  }
+}
